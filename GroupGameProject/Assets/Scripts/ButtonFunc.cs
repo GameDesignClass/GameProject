@@ -9,4 +9,9 @@ public class ButtonFunc : MonoBehaviour
    {
        SceneManager.LoadScene("Scene1");
    }
+
+   public void FinishCustomize()
+   {
+       SceneManager.LoadScene("Scene2");
+   }
 }
