@@ -14,4 +14,14 @@ public class ButtonFunc : MonoBehaviour
    {
        SceneManager.LoadScene("Scene2");
    }
+
+   public void changeSceneToStudy()
+   {
+    SceneManager.LoadScene("StudyMinigame");
+   }
+
+   public void changeSceneToBeerPong()
+   {
+    SceneManager.LoadScene("Beerpong game");
+   }
 }

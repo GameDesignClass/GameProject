@@ -124,6 +124,6 @@ public class StudyMinigameScript : MonoBehaviour
     }
     public void continueToNextScene()
     {
-        //SceneManager.LoadScene();
+        SceneManager.LoadScene("Scene2");
     }
 }

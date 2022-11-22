@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene2.unity
     guid: 54a862bfe7bed4304819afb45faae47f
+  - enabled: 1
+    path: Assets/Scenes/Beerpong game.unity
+    guid: d05e2ecc0d6e7cc49adc45a62404a103
+  - enabled: 1
+    path: Assets/Scenes/StudyMinigame.unity
+    guid: 296646990301cd5498960cb126c3eab8
   m_configObjects: {}

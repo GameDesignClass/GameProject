@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
@@ -22,5 +23,10 @@ public class Menu : MonoBehaviour
         Time.timeScale = 1f;
         start.SetActive(false);
         spawn.SetActive(true);
+    }
+
+    public void continueButton()
+    {
+        SceneManager.LoadScene("Scene2");
     }
 }
