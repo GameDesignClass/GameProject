@@ -7,12 +7,53 @@ public class ButtonFunc : MonoBehaviour
 {
    public void StartGame()
    {
-       SceneManager.LoadScene("Scene1");
+       SceneManager.LoadScene("Customize");
+    //    GameManager.instance.tempSceneIndex =  GameManager.instance.currentSceneIndex;
+    //    GameManager.instance.currentSceneIndex = SceneManager.LoadScene("Customize").buildIndex();
+    //    GameManager.instance.previousSceneIndex = GameManager.instance.tempSceneIndex;
+   }
+
+   public void TitleScreen()
+   {
+       SceneManager.LoadScene("Title Screen");
+    //    GameManager.instance.tempSceneIndex =  GameManager.instance.currentSceneIndex;
+    //    GameManager.instance.currentSceneIndex = SceneManager.LoadScene("Title Screen").buildIndex();
+    //    GameManager.instance.previousSceneIndex = GameManager.instance.tempSceneIndex;
    }
 
    public void FinishCustomize()
    {
-       SceneManager.LoadScene("Scene2");
+       SceneManager.LoadScene("Instructions");
+   }
+
+   public void MenuScene()
+   {
+       SceneManager.LoadScene("Menu");
+   }
+
+   public void Work()
+   {
+       SceneManager.LoadScene("Work");
+   }
+
+   public void School()
+   {
+       SceneManager.LoadScene("School");
+   }
+
+   public void Library()
+   {
+       SceneManager.LoadScene("Library");
+   }
+
+   public void Dorms()
+   {
+       SceneManager.LoadScene("Dorms");
+   }
+
+   public void Phone()
+   {
+       SceneManager.LoadScene("PhoneScreen");
    }
 
    public void changeSceneToStudy()
@@ -24,4 +65,5 @@ public class ButtonFunc : MonoBehaviour
    {
     SceneManager.LoadScene("Beerpong game");
    }
+   
 }
