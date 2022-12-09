@@ -266,7 +266,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 502052163}
         m_TargetAssemblyTypeName: RandomScene, Assembly-CSharp
-        m_MethodName: whenNo
+        m_MethodName: whenNo1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 368913909}
   m_Layer: 5
   m_Name: Scenario3No
-  m_TagString: Untagged
+  m_TagString: ToDisable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -435,7 +435,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 368913910}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 502052163}
+        m_TargetAssemblyTypeName: RandomScene, Assembly-CSharp
+        m_MethodName: whenNo3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &368913910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,26 +747,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 1.3678868
-      outSlope: 1.3678868
+      inSlope: 4
+      outSlope: 4
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.6855319
-      value: 0.9377301
-      inSlope: 5.552911
-      outSlope: 5.552911
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
       time: 1
       value: 4
-      inSlope: 9.737935
-      outSlope: 9.737935
+      inSlope: 4
+      outSlope: 4
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -766,8 +769,8 @@ MonoBehaviour:
   scenarios:
   - Your manager asked if you would be willing to take on an extra shift. You know
     you really have to study, but the extra money would be nice.
-  - Your manager has offered you a promotion, but it does require you to take on
-    an extra shift a week.
+  - Your coworker just quit and your team is short staffed, the manager asks if you
+    could work longer shifts
   - An angry customer is insulting you and the spotlight is now on you.
   - Just a casual work day. Take your pay and go on bout your business.
   scene1: {fileID: 210162880}
@@ -1193,7 +1196,7 @@ GameObject:
   - component: {fileID: 970577895}
   m_Layer: 5
   m_Name: Scenario3Yes
-  m_TagString: Untagged
+  m_TagString: ToDisable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1262,7 +1265,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 970577896}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 502052163}
+        m_TargetAssemblyTypeName: RandomScene, Assembly-CSharp
+        m_MethodName: whenYes3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &970577896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1416,7 +1431,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level Up!
+  m_text: Fill in for your team
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1443,8 +1458,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1728,7 +1743,7 @@ GameObject:
   - component: {fileID: 1220466889}
   m_Layer: 5
   m_Name: Scenario2No
-  m_TagString: Untagged
+  m_TagString: ToDisable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1797,7 +1812,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1220466890}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 502052163}
+        m_TargetAssemblyTypeName: RandomScene, Assembly-CSharp
+        m_MethodName: whenNo2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1220466890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1894,7 +1921,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nah, I'm good
+  m_text: Not my company, not my business
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1921,8 +1948,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2481,7 +2508,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1847321794}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 502052163}
+        m_TargetAssemblyTypeName: RandomScene, Assembly-CSharp
+        m_MethodName: Default
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1847321794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2846,7 +2885,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 502052163}
         m_TargetAssemblyTypeName: RandomScene, Assembly-CSharp
-        m_MethodName: whenYes
+        m_MethodName: whenYes1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2908,7 +2947,7 @@ GameObject:
   - component: {fileID: 2005986176}
   m_Layer: 5
   m_Name: Scenario2Yes
-  m_TagString: Untagged
+  m_TagString: ToDisable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2977,7 +3016,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2005986177}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 502052163}
+        m_TargetAssemblyTypeName: RandomScene, Assembly-CSharp
+        m_MethodName: whenYes2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2005986177
 MonoBehaviour:
   m_ObjectHideFlags: 0
