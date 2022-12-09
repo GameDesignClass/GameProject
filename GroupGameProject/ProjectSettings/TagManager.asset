@@ -6,6 +6,13 @@ TagManager:
   tags:
   - ball
   - Game Music
+  - pop up box
+  - Scenario1
+  - Scenario2
+  - Scenario3
+  - Scenario4
+  - ToDisable
+  - Continue
   layers:
   - Default
   - TransparentFX
@@ -45,4 +52,10 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: fore ground
+    uniqueID: 2769368471
+    locked: 0
+  - name: info/text box
+    uniqueID: 3422445337
     locked: 0

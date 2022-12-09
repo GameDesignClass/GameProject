@@ -21,38 +21,52 @@ public class PlayerUI : MonoBehaviour
            c = GameManager.instance.GetCharacter();
        }
        average = 100; //represents grade overall
-       GameManager.instance.average = average;
        social = 50; //represents friends or potentially people you know
-       GameManager.instance.social = social;
        money = Random.Range(0, 35); //represents currency amount
-       GameManager.instance.money = money;
        energy = 40; //reflects tiredness which goes down by each activity
-       GameManager.instance.energy = energy;
-
+       if (GameManager.instance.GetEnergy() == -1)
+       {
+            GameManager.instance.SetEnergy(energy);
+            GameManager.instance.SetAverage(average);
+            GameManager.instance.SetSocial(social);
+            GameManager.instance.SetMoney(money);
+       }
+      
+        playerEnergy = GameManager.instance.GetEnergy();
+        playerAverage = GameManager.instance.GetAverage();
+        playerSocial = GameManager.instance.GetSocial();
+        playerMoney = GameManager.instance.GetMoney();
+       
+       Debug.Log(playerEnergy);
+       Debug.Log(energy);
        DisplayStats();
    }
 
-   private void UpdateStats(string stat, int statsToAdd)
+   public void UpdateStats(string stat, int statsToAdd)
    {
        if (stat == "average")
        {
            average += statsToAdd;
-           GameManager.instance.average += statsToAdd;
+           playerAverage += statsToAdd;
+           GameManager.instance.SetAverage(playerAverage);
        } 
        else if (stat == "social")
        {
            social += statsToAdd;
-           GameManager.instance.social += statsToAdd;
+           playerSocial += statsToAdd;
+           GameManager.instance.SetSocial(playerSocial);
        }
        else if (stat == "money")
        {
            money += statsToAdd;
-           GameManager.instance.money += statsToAdd;
+           playerMoney += statsToAdd;
+           GameManager.instance.SetMoney(playerMoney);
        }
        else
        {
            energy += statsToAdd;
-           GameManager.instance.energy += statsToAdd;
+           playerEnergy += statsToAdd;
+           GameManager.instance.SetEnergy(playerEnergy);
        }
 
        DisplayStats();
@@ -60,9 +74,9 @@ public class PlayerUI : MonoBehaviour
 
    public void DisplayStats()
    {
-       averageText.text = "Average: " + GameManager.instance.average + "/100";
-       socialText.text = "Social: " + GameManager.instance.social + "/100";
-       moneyText.text = "Money: " + GameManager.instance.money + "/100";
-       energyText.text = "Energy: " + GameManager.instance.energy + "/100";
+       averageText.text = "Average: " + GameManager.instance.GetAverage() + "/100";
+       socialText.text = "Social: " + GameManager.instance.GetSocial() + "/100";
+       moneyText.text = "Money: " + GameManager.instance.GetMoney() + "/100";
+       energyText.text = "Energy: " + GameManager.instance.GetEnergy() + "/100";
    }
 }

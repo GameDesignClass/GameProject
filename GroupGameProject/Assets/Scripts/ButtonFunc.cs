@@ -5,6 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class ButtonFunc : MonoBehaviour
 {
+
+    GameObject[] textBoxes;
+
+    void Start()
+    {
+        textBoxes = GameObject.FindGameObjectsWithTag("pop up box");
+
+        foreach (GameObject textBox in textBoxes)
+        {
+            textBox.SetActive(false);
+        }
+    }
+
    public void StartGame()
    {
        SceneManager.LoadScene("Customize");
@@ -29,6 +42,11 @@ public class ButtonFunc : MonoBehaviour
    public void MenuScene()
    {
        SceneManager.LoadScene("Menu");
+   }
+
+   public void EndDay()
+   {
+       SceneManager.LoadScene("Day Ended");
    }
 
    public void Work()
@@ -64,6 +82,28 @@ public class ButtonFunc : MonoBehaviour
    public void changeSceneToBeerPong()
    {
     SceneManager.LoadScene("Beerpong game");
+   }
+
+   public void DropOut()
+   {
+        foreach (GameObject child in textBoxes)
+        {
+            child.SetActive(true);
+            Debug.Log(child + " in button function");
+        }
+   }
+
+   public void ConfirmDO()
+   {
+       SceneManager.LoadScene("Dropped Out");
+   }
+
+   public void CancelDO()
+   {
+       foreach (GameObject child in textBoxes)
+        {
+            child.SetActive(false);
+        }
    }
    
 }
