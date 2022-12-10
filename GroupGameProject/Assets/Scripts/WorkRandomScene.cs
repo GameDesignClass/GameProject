@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 
-public class RandomScene : MonoBehaviour
+public class WorkRandomScene : MonoBehaviour
 {
     [SerializeField] private AnimationCurve animCurve;
     [SerializeField] private TextMeshProUGUI scenarioText;
