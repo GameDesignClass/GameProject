@@ -39,6 +39,11 @@ public class ButtonFunc : MonoBehaviour
        SceneManager.LoadScene("Instructions");
    }
 
+   public void NextInstruction()
+   {
+       SceneManager.LoadScene("Instructions1");
+   }
+
    public void MenuScene()
    {
        SceneManager.LoadScene("Menu");
