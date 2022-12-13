@@ -10,6 +10,7 @@ public class PlayerUI : MonoBehaviour
    public TextMeshProUGUI moneyText;
    public TextMeshProUGUI energyText;
    public int average, social, money, energy;  //These player stats max at 100
+   public int playerAverage, playerSocial, playerMoney, playerEnergy;
 
    public Character c;
 
@@ -23,27 +24,49 @@ public class PlayerUI : MonoBehaviour
        social = 50; //represents friends or potentially people you know
        money = Random.Range(0, 35); //represents currency amount
        energy = 40; //reflects tiredness which goes down by each activity
-
+       if (GameManager.instance.GetEnergy() == -1)
+       {
+            GameManager.instance.SetEnergy(energy);
+            GameManager.instance.SetAverage(average);
+            GameManager.instance.SetSocial(social);
+            GameManager.instance.SetMoney(money);
+       }
+      
+        playerEnergy = GameManager.instance.GetEnergy();
+        playerAverage = GameManager.instance.GetAverage();
+        playerSocial = GameManager.instance.GetSocial();
+        playerMoney = GameManager.instance.GetMoney();
+       
+       Debug.Log(playerEnergy);
+       Debug.Log(energy);
        DisplayStats();
    }
 
-   private void UpdateStats(string stat, int statsToAdd)
+   public void UpdateStats(string stat, int statsToAdd)
    {
        if (stat == "average")
        {
            average += statsToAdd;
+           playerAverage += statsToAdd;
+           GameManager.instance.SetAverage(playerAverage);
        } 
        else if (stat == "social")
        {
            social += statsToAdd;
+           playerSocial += statsToAdd;
+           GameManager.instance.SetSocial(playerSocial);
        }
        else if (stat == "money")
        {
            money += statsToAdd;
+           playerMoney += statsToAdd;
+           GameManager.instance.SetMoney(playerMoney);
        }
        else
        {
            energy += statsToAdd;
+           playerEnergy += statsToAdd;
+           GameManager.instance.SetEnergy(playerEnergy);
        }
 
        DisplayStats();
@@ -51,9 +74,9 @@ public class PlayerUI : MonoBehaviour
 
    public void DisplayStats()
    {
-       averageText.text = "Average: " + average + "/100";
-       socialText.text = "Social: " + social + "/100";
-       moneyText.text = "Money: " + money + "/100";
-       energyText.text = "Energy: " + energy + "/100";
+       averageText.text = "Average: " + GameManager.instance.GetAverage() + "/100";
+       socialText.text = "Social: " + GameManager.instance.GetSocial() + "/100";
+       moneyText.text = "Money: " + GameManager.instance.GetMoney() + "/100";
+       energyText.text = "Energy: " + GameManager.instance.GetEnergy() + "/100";
    }
 }
