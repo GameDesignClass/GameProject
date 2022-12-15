@@ -19,6 +19,7 @@ public class SchoolRandomScene : MonoBehaviour
     [SerializeField] GameObject scene2;
     [SerializeField] GameObject scene3;
     [SerializeField] GameObject scene4;
+    [SerializeField] GameObject scene5;
 
     Button buttonToDiasable1;
     Button buttonToDiasable2;
@@ -48,6 +49,8 @@ public class SchoolRandomScene : MonoBehaviour
             status = GameObject.Find("StatsUI").GetComponent<PlayerUI>();
         }
 
+        scene1 = GameObject.Find("Scenario1");
+
        
 
         //Load number between 0 & 2
@@ -60,6 +63,7 @@ public class SchoolRandomScene : MonoBehaviour
         scene2.gameObject.SetActive(false);
         scene3.gameObject.SetActive(false);
         scene4.gameObject.SetActive(false);
+        scene5.gameObject.SetActive(false);
         GameManager.instance.UpdateActions(-1);
     }
 
@@ -77,9 +81,13 @@ public class SchoolRandomScene : MonoBehaviour
         {
             scene3.gameObject.SetActive(true);
         }
-        else
+        else if ((int)number == 3)
         {
             scene4.gameObject.SetActive(true);
+        }
+        else
+        {
+            scene5.gameObject.SetActive(true);
         }
     } 
 
@@ -181,7 +189,7 @@ public class SchoolRandomScene : MonoBehaviour
         }
         else
         {
-            scenarioText.text = "You get the test answers and pass. Cheating is risky and immmortal and you lay low for a while, thinking about your actions...<br> +15 Average, -8 Energy<br> +30 Depression";
+            scenarioText.text = "You get the test answers and pass. Cheating is risky and immoral and you lay low for a while, thinking about your actions...<br> +15 Average, -8 Energy<br> +30 Depression";
             status.UpdateStats("average", 15);
             status.UpdateStats("energy", -8);
         }
@@ -209,5 +217,10 @@ public class SchoolRandomScene : MonoBehaviour
             status.UpdateStats("energy", -12);
         }
         
+    }
+
+    public void Wordy()
+    {
+        SceneManager.LoadScene("Wordy");
     }
 }

@@ -8,10 +8,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public Image image;
+    public string playerName;
     public int playerAverage;
     public int playerSocial;
     public int playerMoney;
     public int playerEnergy;
+    public string playerMajor;
 
     public int DEFAULT_ACTIONS_LEFT = 2;
     public int actionsLeft;
@@ -47,6 +49,8 @@ public class GameManager : MonoBehaviour
     }
 
     private void Start(){
+        playerName="";
+        playerMajor="";
         playerAverage = -1;
         playerSocial = -1;
         playerEnergy = -1;
@@ -82,6 +86,26 @@ public class GameManager : MonoBehaviour
     {
         image = GetComponent<Image>();
         return image.sprite;
+    }
+
+    public void SetName(string name)
+    {
+        playerName = name;
+    }
+
+    public string GetName()
+    {
+        return playerName;
+    }
+
+    public void SetMajor(string major)
+    {
+        playerMajor = major;
+    }
+
+    public string GetMajor()
+    {
+        return playerMajor;
     }
 
     public void SetAverage(int average)

@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ButtonFunc : MonoBehaviour
 {
     private int playerActionsLeft;
     GameObject[] textBoxes;
+    [SerializeField] TMP_InputField inputField;
+    [SerializeField] TMP_Dropdown dropDown;
 
     void Start()
     {
@@ -36,9 +39,18 @@ public class ButtonFunc : MonoBehaviour
     //    GameManager.instance.previousSceneIndex = GameManager.instance.tempSceneIndex;
    }
 
+   public void Settings()
+   {
+       SceneManager.LoadScene("Settings");
+   }
+
    public void FinishCustomize()
    {
        SceneManager.LoadScene("Instructions");
+       string s = inputField.text;
+       string z = dropDown.options[dropDown.value].text;
+       GameManager.instance.SetName(s);
+       GameManager.instance.SetMajor(z);
    }
 
    public void NextInstruction()
@@ -82,6 +94,11 @@ public class ButtonFunc : MonoBehaviour
        SceneManager.LoadScene("PhoneScreen");
    }
 
+   public void NotableScores()
+   {
+       SceneManager.LoadScene("NotableScores");
+   }
+
    public void changeSceneToStudy()
    {
     SceneManager.LoadScene("StudyMinigame");
@@ -90,6 +107,10 @@ public class ButtonFunc : MonoBehaviour
    public void changeSceneToBeerPong()
    {
     SceneManager.LoadScene("Beerpong game");
+   }
+   public void ChangeToWordy()
+   {
+       SceneManager.LoadScene("Wordy");
    }
 
 //    public void DropOut()

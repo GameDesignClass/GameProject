@@ -39,6 +39,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Day Ended.unity
     guid: 6b1defa039da447e4be786ea578a3485
   - enabled: 1
+    path: Assets/Scenes/MiniGames/Wordy.unity
+    guid: 94e538d51aa9ef74198ff21d75c1ca2e
+  - enabled: 1
     path: Assets/Scenes/MiniGames/Beerpong game.unity
     guid: d05e2ecc0d6e7cc49adc45a62404a103
   - enabled: 1
@@ -50,4 +53,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndGame.unity
     guid: 822502ae0b4734f14ab4bb57c91c9f00
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: bb49d8e462bee4ba49d0ab2ff3311f01
+  - enabled: 1
+    path: Assets/Scenes/NotableScores.unity
+    guid: 504fa9a3fb2504181b5b3d3a7aba447b
   m_configObjects: {}

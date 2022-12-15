@@ -954,11 +954,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "You've just enrolled into (Our College Name) and it's time to start your
-    journey as a college student! \n\nHere you'll learn the complexity of balancing
-    school, working, social life, and money management. \n\nThe learning goal here
-    is acquire the concept that your decisions can have a major impact on your finances,
-    mental health, and the path you go down as you leave college. "
+  m_text: "You've just enrolled into Universimy and it's time to start your journey
+    as a college student! \n\nHere you'll learn the complexity of balancing school,
+    working, social life, and money management. \n\nThe learning goal here is acquire
+    the concept that your decisions can have a major impact on your finances, mental
+    health, and the path you go down as you leave college. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
